@@ -7,6 +7,7 @@
 <!ELEMENT Page (#PCDATA)>
 <!ATTLIST Page unit CDATA #IMPLIED>
 <!ELEMENT Gender (#PCDATA)>
+<!ATTLIST Gender uri CDATA #IMPLIED>
 <!ELEMENT Thumbnail (#PCDATA)>
 <!ELEMENT SalesNumber (#PCDATA)>
 <!ATTLIST SalesNumber invID CDATA #IMPLIED>
@@ -29,6 +30,9 @@
 <!ATTLIST RelatedBook id CDATA #IMPLIED>
 <!ATTLIST RelatedBook type CDATA #IMPLIED>
 <!ATTLIST RelatedBook state CDATA #IMPLIED>
+<!ELEMENT RelatedPerson (#PCDATA)>
+<!ATTLIST RelatedPerson id CDATA #IMPLIED>
+<!ATTLIST RelatedPerson type CDATA #IMPLIED>
 <!ELEMENT Binding (#PCDATA | Name | Participant | Date | Dimension | Term | Origin | DigitalSurrogate | Manifest | Record | Thumbnail)*>
 <!ELEMENT RelatedText (#PCDATA)>
 <!ELEMENT Dimension (#PCDATA | Height | Width | Depth)*>
@@ -71,7 +75,7 @@
 <!ELEMENT Pages (#PCDATA)>
 <!ATTLIST Pages unit CDATA #IMPLIED>
 <!ELEMENT GenericTerm (#PCDATA)>
-<!ELEMENT Participant (#PCDATA | Name | AltName | Name_Bbma | Concept | Birth | Death | QualifiedTitle | Gender | Residence | Occupation | Note | Note_Bbma | Record)*>
+<!ELEMENT Participant (#PCDATA | Name | AltName | Name_Bbma | Concept | Birth | Death | QualifiedTitle | Gender | Residence | Occupation | Note | Note_Bbma | RelatedPerson |Record)*>
 <!ATTLIST Participant id CDATA #IMPLIED>
 <!ATTLIST Participant role CDATA #IMPLIED>
 <!ATTLIST Participant id_bbma CDATA #IMPLIED>
@@ -86,7 +90,7 @@
 <!ATTLIST Country id CDATA #IMPLIED>
 <!ATTLIST Country id_bbma CDATA #IMPLIED>
 <!ATTLIST Country geonames CDATA #IMPLIED>
-<!ELEMENT Collection (#PCDATA | Concept | Name | Type | Participant | Book | Inventory | Record | Note | Note_Bbma)*>
+<!ELEMENT Collection (#PCDATA | Concept | Name | AltName | Type | Participant | Book | Inventory | Record | Note | Note_Bbma)*>
 <!ATTLIST Collection state CDATA #IMPLIED>
 <!ATTLIST Collection id CDATA #IMPLIED>
 <!ELEMENT RelatedManifestation (#PCDATA)>
@@ -139,7 +143,7 @@
 <!ATTLIST Organisation id_bbma CDATA #IMPLIED>
 <!ELEMENT Title (#PCDATA)>
 <!ATTLIST Title lang CDATA #IMPLIED>
-<!ELEMENT Text (#PCDATA | Title | AssociatedWork | Language | Incipit | Explicit | Note | Record | AltTitle | Comment |  Participant)*>
+<!ELEMENT Text (#PCDATA | Title | AssociatedWork | Language | Incipit | Explicit | Repertory | Note | Record | AltTitle | Comment |  Participant)*>
 <!ATTLIST Text id CDATA #IMPLIED>
 <!ELEMENT Residence (#PCDATA)>
 <!ELEMENT Comment (#PCDATA)>
@@ -159,6 +163,7 @@
 <!ELEMENT Occupation (#PCDATA)>
 <!ATTLIST Occupation id CDATA #IMPLIED>
 <!ELEMENT Repository (#PCDATA | Concept | RelatedConcept | Name | AltName | Name_Bbma | Country | City | Organisation | Note)*>
+<!--<!ATTLIST Repository id_bbma CDATA #IMPLIED>-->
 <!ELEMENT Type (#PCDATA)>
 <!ELEMENT Year (#PCDATA)>
 <!ATTLIST Year type CDATA #IMPLIED>
