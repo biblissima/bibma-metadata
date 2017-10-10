@@ -1,0 +1,185 @@
+<!ELEMENT Note_Bbma (#PCDATA)>
+<!ELEMENT HasFeature (#PCDATA | FeatureType | Page | DigitalSurrogate | Thumbnail | Canvas | Descriptor | Caption | Rubric | Inscription | Note | Record | Date)*>
+<!ATTLIST HasFeature id CDATA #IMPLIED>
+<!ELEMENT Subidentifier (#PCDATA)>
+<!ELEMENT Explicit (#PCDATA)>
+<!ATTLIST Explicit lang CDATA #IMPLIED>
+<!ELEMENT Page (#PCDATA)>
+<!ATTLIST Page unit CDATA #IMPLIED>
+<!ELEMENT Gender (#PCDATA)>
+<!ATTLIST Gender uri CDATA #IMPLIED>
+<!ELEMENT Thumbnail (#PCDATA)>
+<!ELEMENT SalesNumber (#PCDATA)>
+<!ATTLIST SalesNumber invID CDATA #IMPLIED>
+<!ELEMENT DigitalSurrogate (#PCDATA)>
+<!ATTLIST DigitalSurrogate type CDATA #IMPLIED>
+<!ELEMENT Name (#PCDATA)>
+<!ATTLIST Name lang CDATA #IMPLIED>
+<!ELEMENT Identifier (#PCDATA | Idno | Subidentifier | Volume)*>
+<!ATTLIST Identifier type CDATA #IMPLIED>
+<!ATTLIST Identifier source CDATA #IMPLIED>
+<!ATTLIST Identifier uri CDATA #IMPLIED>
+<!ELEMENT Inscription (#PCDATA)>
+<!ELEMENT AssociatedWork (#PCDATA | Title | Title_Bbma | Concept)*>
+<!ATTLIST AssociatedWork id CDATA #IMPLIED>
+<!ATTLIST AssociatedWork id_bbma CDATA #IMPLIED>
+<!ATTLIST AssociatedWork certainty CDATA #IMPLIED>
+<!ELEMENT Book (#PCDATA | Concept | ObjectType | Shelfmark | FormerShelfmark | Name | AttestedTitle | Text | Participant | Date | Place | DigitalSurrogate | Manifest | Thumbnail | Record | Extent | Format | BibliographicReference | Term | Note | Note_Bbma | HasPart | HasFeature | RelatedManifestation | InventoryPage | Canvas | InventorySection | SalesNumber | Binding | RelatedBook )*>
+<!ATTLIST Book state CDATA #IMPLIED>
+<!ATTLIST Book id CDATA #IMPLIED>
+<!ELEMENT RelatedBook (#PCDATA)>
+<!ATTLIST RelatedBook id CDATA #IMPLIED>
+<!ATTLIST RelatedBook certainty CDATA #IMPLIED>
+<!ATTLIST RelatedBook type CDATA #IMPLIED>
+<!ATTLIST RelatedBook state CDATA #IMPLIED>
+<!ELEMENT RelatedPerson (#PCDATA)>
+<!ATTLIST RelatedPerson id CDATA #IMPLIED>
+<!ATTLIST RelatedPerson type CDATA #IMPLIED>
+<!ELEMENT Binding (#PCDATA | Name | Participant | Date | Dimension | Term | Origin | DigitalSurrogate | Manifest | Record | Thumbnail)*>
+<!ELEMENT RelatedText (#PCDATA)>
+<!ELEMENT Dimension (#PCDATA | Height | Width | Depth)*>
+<!ELEMENT Height (#PCDATA)>
+<!ATTLIST Height unit CDATA #IMPLIED>
+<!ELEMENT Width (#PCDATA)>
+<!ATTLIST Width unit CDATA #IMPLIED>
+<!ELEMENT Depth (#PCDATA)>
+<!ATTLIST Depth unit CDATA #IMPLIED>
+<!ELEMENT Origin (#PCDATA)>
+<!ELEMENT Work (#PCDATA | Title | AltTitle | Title_Bbma | Text | Concept | Note | Term | Record | Language | Note_Bbma | Repertory | RelatedWork)*>
+<!ATTLIST Work id CDATA #IMPLIED>
+<!ATTLIST Work id_bbma CDATA #IMPLIED>
+<!ELEMENT AttestedTitle (#PCDATA)>
+<!ATTLIST AttestedTitle lang CDATA #IMPLIED>
+<!ELEMENT Title_Bbma (#PCDATA)>
+<!ATTLIST Title_Bbma lang CDATA #IMPLIED>
+<!ELEMENT Idno (#PCDATA)>
+<!ATTLIST Idno type CDATA #IMPLIED>
+<!ELEMENT Concept (#PCDATA)>
+<!ATTLIST Concept source CDATA #IMPLIED>
+<!ELEMENT GroupBooks (#PCDATA | Shelfmark | Name | Record | Text | Participant | HasPart | Concept | Note)*>
+<!ELEMENT InventorySection (#PCDATA)>
+<!ELEMENT Manifestation (#PCDATA | Date | Place | Manifest | Text | HasPart | Participant | Format | Note | BibliographicReference | Record | Book | DigitalSurrogate | Identifier | RelatedManifestation)*>
+<!ATTLIST Manifestation id CDATA #IMPLIED>
+<!ATTLIST Manifestation state CDATA #IMPLIED>
+<!ELEMENT Canvas (#PCDATA)>
+<!ELEMENT RelatedConcept (#PCDATA)>
+<!ATTLIST RelatedConcept type CDATA #IMPLIED>
+<!ATTLIST RelatedConcept id_bbma CDATA #IMPLIED>
+<!ELEMENT Term (#PCDATA)>
+<!ATTLIST Term context CDATA #IMPLIED>
+<!ATTLIST Term id CDATA #IMPLIED>
+<!ATTLIST Term uri CDATA #IMPLIED>
+<!ELEMENT City (#PCDATA)>
+<!ATTLIST City id CDATA #IMPLIED>
+<!ATTLIST City id_bbma CDATA #IMPLIED>
+<!ATTLIST City geonames CDATA #IMPLIED>
+<!ELEMENT Pages (#PCDATA)>
+<!ATTLIST Pages unit CDATA #IMPLIED>
+<!ELEMENT GenericTerm (#PCDATA)>
+<!ELEMENT Participant (#PCDATA | Name | AltName | Name_Bbma | Concept | Birth | Death | QualifiedTitle | Gender | Residence | Occupation | Note | Note_Bbma | RelatedPerson |Record)*>
+<!ATTLIST Participant id CDATA #IMPLIED>
+<!ATTLIST Participant role CDATA #IMPLIED>
+<!ATTLIST Participant id_bbma CDATA #IMPLIED>
+<!ATTLIST Participant certainty CDATA #IMPLIED>
+<!ELEMENT RecordList (#PCDATA | DataBase | Book | Manifestation | GroupBooks | Participant | Place | Work | Repository | Collection)*>
+<!ELEMENT Volume (#PCDATA)>
+<!ELEMENT Note (#PCDATA)>
+<!ATTLIST Note type CDATA #IMPLIED>
+<!ELEMENT Descriptor (#PCDATA | Name | Name_Bbma | Concept | RelatedConcept | AltName | Context | Note)*>
+<!ATTLIST Descriptor id CDATA #IMPLIED>
+<!ATTLIST Descriptor id_bbma CDATA #IMPLIED>
+<!ATTLIST Descriptor certainty CDATA #IMPLIED>
+<!ELEMENT Death (#PCDATA | Date | Place)*>
+<!ELEMENT Country (#PCDATA)>
+<!ATTLIST Country id CDATA #IMPLIED>
+<!ATTLIST Country id_bbma CDATA #IMPLIED>
+<!ATTLIST Country geonames CDATA #IMPLIED>
+<!ELEMENT Collection (#PCDATA | Concept | Name | AltName | Type | Participant | Book | Inventory | Record | Note | Note_Bbma)*>
+<!ATTLIST Collection state CDATA #IMPLIED>
+<!ATTLIST Collection id CDATA #IMPLIED>
+<!ELEMENT RelatedManifestation (#PCDATA)>
+<!ATTLIST RelatedManifestation id CDATA #IMPLIED>
+<!ELEMENT Repertory (#PCDATA)>
+<!ELEMENT Inventory (#PCDATA | Title | Sale | Shelfmark | Date | Place | Participant | DigitalSurrogate | Thumbnail | Manifest | Record | Note)*>
+<!ATTLIST Inventory id CDATA #IMPLIED>
+<!ELEMENT PartType (#PCDATA)>
+<!ATTLIST PartType id CDATA #IMPLIED>
+<!ATTLIST PartType uri CDATA #IMPLIED>
+<!ELEMENT Sale (#PCDATA)>
+<!ELEMENT FeatureType (#PCDATA)>
+<!ATTLIST FeatureType id CDATA #IMPLIED>
+<!ATTLIST FeatureType uri CDATA #IMPLIED>
+<!ELEMENT Rubric (#PCDATA)>
+<!ELEMENT Extent (#PCDATA)>
+<!ATTLIST Extent unit CDATA #IMPLIED>
+<!ELEMENT Shelfmark (#PCDATA | Organisation | Identifier)*>
+<!ATTLIST Shelfmark id_bbma CDATA #IMPLIED>
+<!ELEMENT FormerShelfmark (#PCDATA)>
+<!ELEMENT HasPart (#PCDATA | Name | PartType | Pages | DigitalSurrogate |Thumbnail | Text | Participant | Date | Place | Format | Term | Record | Note | RelatedManifestation | HasFeature | HasPart | BibliographicReference | Book)*>
+<!ATTLIST HasPart id CDATA #IMPLIED>
+<!ELEMENT Birth (#PCDATA | Date | Place)*>
+<!ELEMENT DataBase (#PCDATA)>
+<!ATTLIST DataBase uri CDATA #IMPLIED>
+<!ELEMENT Incipit (#PCDATA)>
+<!ATTLIST Incipit lang CDATA #IMPLIED>
+<!ELEMENT ObjectType (#PCDATA)>
+<!ATTLIST ObjectType uri CDATA #IMPLIED>
+<!ELEMENT Format (#PCDATA)>
+<!ATTLIST Format unit CDATA #IMPLIED>
+<!ATTLIST Format uri CDATA #IMPLIED>
+<!ELEMENT Language (#PCDATA)>
+<!ATTLIST Language uri CDATA #IMPLIED>
+<!ATTLIST Language type CDATA #IMPLIED>
+<!ATTLIST Language id CDATA #IMPLIED>
+<!ELEMENT QualifiedTitle (#PCDATA)>
+<!ELEMENT Record (#PCDATA)>
+<!ATTLIST Record id CDATA #IMPLIED>
+<!ATTLIST Record root CDATA #IMPLIED>
+<!ATTLIST Record source CDATA #IMPLIED>
+<!ELEMENT InventoryPage (#PCDATA)>
+<!ATTLIST InventoryPage invID CDATA #IMPLIED>
+<!ATTLIST InventoryPage unit CDATA #IMPLIED>
+<!ELEMENT AltTitle (#PCDATA)>
+<!ATTLIST AltTitle lang CDATA #IMPLIED>
+<!ELEMENT Context (#PCDATA)>
+<!ELEMENT Organisation (#PCDATA)>
+<!ATTLIST Organisation id CDATA #IMPLIED>
+<!ATTLIST Organisation id_bbma CDATA #IMPLIED>
+<!ELEMENT Title (#PCDATA)>
+<!ATTLIST Title lang CDATA #IMPLIED>
+<!ELEMENT Text (#PCDATA | Title | AssociatedWork | Language | Incipit | Explicit | Repertory | Note | Record | AltTitle | Comment |  Participant)*>
+<!ATTLIST Text id CDATA #IMPLIED>
+<!ELEMENT Residence (#PCDATA)>
+<!ELEMENT Comment (#PCDATA)>
+<!ATTLIST Residence id CDATA #IMPLIED>
+<!ATTLIST Residence geonames CDATA #IMPLIED>
+<!ATTLIST Residence id_bbma CDATA #IMPLIED>
+<!ELEMENT Century (#PCDATA)>
+<!ELEMENT Manifest (#PCDATA)>
+<!ELEMENT BibliographicReference (#PCDATA)>
+<!ATTLIST BibliographicReference source CDATA #IMPLIED>
+<!ELEMENT Date (#PCDATA | Century | Year | Note)*>
+<!ATTLIST Date uri CDATA #IMPLIED>
+<!ATTLIST Date type CDATA #IMPLIED>
+<!ELEMENT Caption (#PCDATA | GenericTerm | RelatedText)*>
+<!ELEMENT Name_Bbma (#PCDATA)>
+<!ATTLIST Name_Bbma lang CDATA #IMPLIED>
+<!ELEMENT Occupation (#PCDATA)>
+<!ATTLIST Occupation id CDATA #IMPLIED>
+<!ELEMENT Repository (#PCDATA | Concept | RelatedConcept | Name | AltName | Name_Bbma | Country | City | Organisation | Note)*>
+<!--<!ATTLIST Repository id_bbma CDATA #IMPLIED>-->
+<!ELEMENT Type (#PCDATA)>
+<!ELEMENT Year (#PCDATA)>
+<!ATTLIST Year type CDATA #IMPLIED>
+<!ATTLIST Year normal CDATA #IMPLIED>
+<!ATTLIST Year uri CDATA #IMPLIED>
+<!ELEMENT AltName (#PCDATA)>
+<!ATTLIST AltName lang CDATA #IMPLIED>
+<!ELEMENT Place (#PCDATA | Name | Concept | AltName | Name_Bbma | RelatedConcept | Note)*>
+<!ATTLIST Place type CDATA #IMPLIED>
+<!ATTLIST Place id CDATA #IMPLIED>
+<!ATTLIST Place id_bbma CDATA #IMPLIED>
+<!ELEMENT RelatedWork (#PCDATA)>
+<!ATTLIST RelatedWork id CDATA #IMPLIED>
+<!ATTLIST RelatedWork type CDATA #IMPLIED>
+<!ATTLIST RelatedWork id_bbma CDATA #IMPLIED>
