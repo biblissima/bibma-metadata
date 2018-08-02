@@ -1,3 +1,9 @@
+<!ELEMENT ScriptDesc (#PCDATA)>
+<!ELEMENT Ruling (#PCDATA)>
+<!ELEMENT DecoDesc (#PCDATA)>
+<!ELEMENT Stamp (#PCDATA)>
+<!ELEMENT CodicoDesc (#PCDATA)>
+<!ELEMENT BindingDesc (#PCDATA)>
 <!ELEMENT Note_Bbma (#PCDATA)>
 <!ELEMENT HasFeature (#PCDATA | FeatureType | Page | DigitalSurrogate | Thumbnail | Canvas | Descriptor | Caption | Rubric | Inscription | Note | Record | Date)*>
 <!ATTLIST HasFeature id CDATA #IMPLIED>
@@ -24,7 +30,7 @@
 <!ATTLIST AssociatedWork id CDATA #IMPLIED>
 <!ATTLIST AssociatedWork id_bbma CDATA #IMPLIED>
 <!ATTLIST AssociatedWork certainty CDATA #IMPLIED>
-<!ELEMENT Book (#PCDATA | Concept | ObjectType | Shelfmark | FormerShelfmark | Name | AttestedTitle | Text | Participant | Date | Place | DigitalSurrogate | Manifest | Thumbnail | Record | Extent | Format | BibliographicReference | Term | Note | Note_Bbma | HasPart | HasFeature | RelatedManifestation | InventoryPage | Canvas | InventorySection | SalesNumber | Binding | RelatedBook )*>
+<!ELEMENT Book (#PCDATA ScriptDesc | Ruling | DecoDesc | Stamp | CodicoDesc | BindingDesc | Concept | ObjectType | Shelfmark | FormerShelfmark | Name | AttestedTitle | Text | Participant | Date | Place | DigitalSurrogate | Manifest | Thumbnail | Record | Extent | Format | BibliographicReference | Term | Note | Note_Bbma | HasPart | HasFeature | RelatedManifestation | InventoryPage | Canvas | InventorySection | SalesNumber | Binding | RelatedBook )*>
 <!ATTLIST Book state CDATA #IMPLIED>
 <!ATTLIST Book id CDATA #IMPLIED>
 <!ELEMENT RelatedBook (#PCDATA)>
@@ -84,7 +90,7 @@
 <!ELEMENT RecordList (#PCDATA | DataBase | Book | Manifestation | GroupBooks | Participant | Place | Work | Repository | Collection)*>
 <!ELEMENT Volume (#PCDATA)>
 <!ELEMENT Note (#PCDATA)>
-<!ATTLIST Note type CDATA #IMPLIED>
+<!ATTLIST Note type (scopecontent | provenance) CDATA #IMPLIED>
 <!ELEMENT Descriptor (#PCDATA | Name | Name_Bbma | Concept | RelatedConcept | AltName | Context | Note)*>
 <!ATTLIST Descriptor id CDATA #IMPLIED>
 <!ATTLIST Descriptor id_bbma CDATA #IMPLIED>
