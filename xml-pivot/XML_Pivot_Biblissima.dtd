@@ -22,7 +22,7 @@
 <!ELEMENT Name (#PCDATA)>
 <!ATTLIST Name lang CDATA #IMPLIED>
 <!ELEMENT Identifier (#PCDATA | Idno | Subidentifier | Volume)*>
-<!ATTLIST Identifier type CDATA #IMPLIED>
+<!ATTLIST Identifier type (canonical | dummy_shelfmark) CDATA #IMPLIED>
 <!ATTLIST Identifier source CDATA #IMPLIED>
 <!ATTLIST Identifier uri CDATA #IMPLIED>
 <!ELEMENT Inscription (#PCDATA)>
