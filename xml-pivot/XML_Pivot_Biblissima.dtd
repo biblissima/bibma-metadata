@@ -40,6 +40,7 @@
 <!ATTLIST RelatedBook state CDATA #IMPLIED>
 <!ELEMENT RelatedPerson (#PCDATA)>
 <!ATTLIST RelatedPerson id CDATA #IMPLIED>
+<!ATTLIST RelatedPerson id_bbma CDATA #IMPLIED>
 <!ATTLIST RelatedPerson type CDATA #IMPLIED>
 <!ELEMENT Binding (#PCDATA | Name | Participant | Date | Dimension | Term | Origin | DigitalSurrogate | Manifest | Record | Thumbnail)*>
 <!ELEMENT RelatedText (#PCDATA)>
@@ -75,7 +76,7 @@
 <!ATTLIST Manifestation state CDATA #IMPLIED>
 <!ELEMENT Canvas (#PCDATA)>
 <!ELEMENT RelatedConcept (#PCDATA)>
-<!ATTLIST RelatedConcept type CDATA #IMPLIED>
+<!ATTLIST RelatedConcept type (skos_broader) CDATA #IMPLIED>
 <!ATTLIST RelatedConcept id_bbma CDATA #IMPLIED>
 <!ELEMENT Term (#PCDATA)>
 <!ATTLIST Term context CDATA #IMPLIED>
@@ -96,7 +97,7 @@
 <!ELEMENT RecordList (#PCDATA | DataBase | Book | Manifestation | GroupBooks | Participant | Place | Work | Repository | Collection | ConceptScheme)*>
 <!ELEMENT Volume (#PCDATA)>
 <!ELEMENT Note (#PCDATA)>
-<!ATTLIST Note type (scopecontent | provenance) CDATA #IMPLIED>
+<!ATTLIST Note type (scopecontent | provenance | biographic) CDATA #IMPLIED>
 <!ELEMENT Descriptor (#PCDATA | Name | Name_Bbma | Concept | RelatedConcept | AltName | Context | Note | Broader)*>
 <!ATTLIST Descriptor id CDATA #IMPLIED>
 <!ATTLIST Descriptor id_bbma CDATA #IMPLIED>
