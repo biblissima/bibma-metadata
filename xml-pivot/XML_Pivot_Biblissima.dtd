@@ -30,7 +30,7 @@
 <!ATTLIST AssociatedWork id CDATA #IMPLIED>
 <!ATTLIST AssociatedWork id_bbma CDATA #IMPLIED>
 <!ATTLIST AssociatedWork certainty CDATA #IMPLIED>
-<!ELEMENT Book (#PCDATA ScriptDesc | Ruling | DecoDesc | Stamp | CodicoDesc | BindingDesc | Concept | ObjectType | Shelfmark | FormerShelfmark | Name | AttestedTitle | Text | Participant | Date | Place | DigitalSurrogate | Manifest | Thumbnail | Record | Extent | Format | BibliographicReference | Term | Note | Note_Bbma | HasPart | HasFeature | RelatedManifestation | InventoryPage | Canvas | InventorySection | SalesNumber | Binding | RelatedBook )*>
+<!ELEMENT Book (#PCDATA | ScriptDesc | Ruling | DecoDesc | Stamp | CodicoDesc | BindingDesc | Concept | ObjectType | Shelfmark | FormerShelfmark | Name | AttestedTitle | Text | Participant | Date | Place | DigitalSurrogate | Manifest | Thumbnail | Record | Extent | Format | BibliographicReference | Term | Note | Note_Bbma | HasPart | HasFeature | RelatedManifestation | InventoryPage | Canvas | InventorySection | SalesNumber | Binding | RelatedBook )*>
 <!ATTLIST Book state CDATA #IMPLIED>
 <!ATTLIST Book id CDATA #IMPLIED>
 <!ELEMENT RelatedBook (#PCDATA)>
@@ -60,8 +60,14 @@
 <!ATTLIST Title_Bbma lang CDATA #IMPLIED>
 <!ELEMENT Idno (#PCDATA)>
 <!ATTLIST Idno type CDATA #IMPLIED>
-<!ELEMENT Concept (#PCDATA)>
+<!ELEMENT ConceptScheme (Name | Concept)>
+<!ELEMENT Concept (#PCDATA | Name | Name_Bbma | Broader | Dewey)>
 <!ATTLIST Concept source CDATA #IMPLIED>
+<!ATTLIST Concept id CDATA #IMPLIED>
+<!ATTLIST Concept id_bbma CDATA #IMPLIED>
+<!ELEMENT Broader>
+<!ATTLIST Broader id CDATA #IMPLIED>
+<!ATTLIST Broader id_bbma CDATA #IMPLIED>
 <!ELEMENT GroupBooks (#PCDATA | Shelfmark | Name | Record | Text | Participant | HasPart | Concept | Note)*>
 <!ELEMENT InventorySection (#PCDATA)>
 <!ELEMENT Manifestation (#PCDATA | Date | Place | Manifest | Text | HasPart | Participant | Format | Note | BibliographicReference | Record | Book | DigitalSurrogate | Identifier | RelatedManifestation)*>
@@ -87,11 +93,11 @@
 <!ATTLIST Participant role CDATA #IMPLIED>
 <!ATTLIST Participant id_bbma CDATA #IMPLIED>
 <!ATTLIST Participant certainty CDATA #IMPLIED>
-<!ELEMENT RecordList (#PCDATA | DataBase | Book | Manifestation | GroupBooks | Participant | Place | Work | Repository | Collection)*>
+<!ELEMENT RecordList (#PCDATA | DataBase | Book | Manifestation | GroupBooks | Participant | Place | Work | Repository | Collection | ConceptScheme)*>
 <!ELEMENT Volume (#PCDATA)>
 <!ELEMENT Note (#PCDATA)>
 <!ATTLIST Note type (scopecontent | provenance) CDATA #IMPLIED>
-<!ELEMENT Descriptor (#PCDATA | Name | Name_Bbma | Concept | RelatedConcept | AltName | Context | Note)*>
+<!ELEMENT Descriptor (#PCDATA | Name | Name_Bbma | Concept | RelatedConcept | AltName | Context | Note | Broader)*>
 <!ATTLIST Descriptor id CDATA #IMPLIED>
 <!ATTLIST Descriptor id_bbma CDATA #IMPLIED>
 <!ATTLIST Descriptor certainty CDATA #IMPLIED>
