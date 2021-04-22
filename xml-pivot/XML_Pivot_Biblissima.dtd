@@ -169,6 +169,7 @@
 <!ATTLIST Residence id_bbma CDATA #IMPLIED>
 <!ELEMENT Century (#PCDATA)>
 <!ELEMENT Manifest (#PCDATA)>
+<!ATTLIST Manifest type CDATA #IMPLIED>
 <!ELEMENT BibliographicReference (#PCDATA)>
 <!ATTLIST BibliographicReference source CDATA #IMPLIED>
 <!ELEMENT Date (#PCDATA | Century | Year | Note)*>
